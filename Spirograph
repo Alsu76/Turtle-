@@ -1,0 +1,44 @@
+import random
+import turtle
+from turtle import Turtle, Screen
+from typing import List
+
+timmy_the_turtle = Turtle()
+turtle.colormode(255)
+timmy_the_turtle.shape('turtle')
+move = [0,90,180,270]
+#timmy_the_turtle.pensize(10)
+timmy_the_turtle.speed("fastest")
+
+def random_color():
+    r = random.randint(0,255)
+    g = random.randint(0,255)
+    b = random.randint(0,255)
+    return (r,g,b)
+
+def draw_sp(size_of_gap):
+    #draw a cirle
+    for i in range(int(360/size_of_gap)):
+        timmy_the_turtle.circle(180)
+        timmy_the_turtle.color(random_color())
+        current_heading = timmy_the_turtle.heading()
+        timmy_the_turtle.setheading(current_heading+size_of_gap)
+
+draw_sp(3)
+
+
+
+#new_turtle = Turtle()
+
+
+screen = Screen()
+
+screen.exitonclick()
+
+
+#new_turtle = Turtle()
+
+
+screen = Screen()
+
+screen.exitonclick()
